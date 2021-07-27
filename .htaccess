@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+ErrorDocument 403 http://eqaims-v1.com:8022/you-not-have-permission-to-access-url-on-this-server.html
+ErrorDocument 404 http://eqaims-v1.com:8022/the-requested-url-was-not-found-on-this-server.html
+ErrorDocument 500 http://eqaims-v1.com:8022/internal-server-error.html
+ErrorDocument 503 http://eqaims-v1.com:8022/this-site-is-currently-undering-going-maintenance.html
+
+RewriteRule ^you-not-have-permission-to-access-url-on-this-server\.html$ index.php?id=f403 [L]
+RewriteRule ^the-requested-url-was-not-found-on-this-server\.html$ index.php?id=e404 [L]
+RewriteRule ^internal-server-error\.html$ index.php?id=e500 [L]
+RewriteRule ^this-site-is-currently-undering-going-maintenance\.html$ index.php?id=e503 [L]
+RewriteRule ^the-target-machine-actively-refused-it\.html$ index.php?id=e2002 [L]
+
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]
+
+Options All -Indexes
+</IfModule>
