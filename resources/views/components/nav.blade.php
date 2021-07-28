@@ -1,11 +1,11 @@
 <div class="md:hidden flex">
-  <a href="/" class="aburger" alt="kikiding.space - menu" title="kikiding.space - menu">
+  <a href="/" id="aburger" alt="kikiding.space - menu" title="kikiding.space - menu">
     <div class="bg-white font-bold text-black sm:text-lg text-md px-4 py-2 rounded-xl border-2 border-b-4 border-black transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-100">
       <p class="text-center"><i class="fas fa-bars fa-lg"></i></p>
     </div>
   </a>
 </div>
-<div class="flex md:flex md:flex-row flex-col md:gap-2 gap-3">
+<div class="menu-flex md:flex md:flex-row flex-col md:gap-2 gap-3">
   <a href="/" alt="kikiding.space - home" title="kikiding.space - home">
     <div class="{{ $title === 'home' ? 'bg-myBlue text-white' : 'bg-white text-black' }} w-full md:w-24 py-1 rounded-xl border-2 border-b-4 border-black transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-100">
       <p class="font-bold md:text-lg text-md text-center">Home</p>
@@ -17,7 +17,7 @@
     </div>
   </a>
 </div>
-<div class="flex md:flex md:flex-row flex-col md:gap-2 gap-3">
+<div class="menu-flex md:flex md:flex-row flex-col md:gap-2 gap-3">
   <a href="/works" alt="kikiding.space - works" title="kikiding.space - works">
     <div class="{{ $title === 'works' || Request::segment(1) === 'works' ? 'bg-myBlue text-white' : 'bg-white text-black' }} w-full md:w-24 py-1 rounded-xl border-2 border-b-4 border-black transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-100">
       <p class="font-bold md:text-lg text-md text-center">Works</p>
